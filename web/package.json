@@ -1,0 +1,20 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build:dsp": "asc dsp/voices.ts --outFile dsp/voices.wasm --textFile dsp/voices.wat --optimize --runtime minimal --noAssert --initialMemory 8 --maximumMemory 8",
+    "test": "node test/wasm.test.mjs && node test/engine.test.mjs && node test/dsp-fallback.test.mjs && node test/sequencer.test.mjs && node test/demo.test.mjs && node test/smoke.test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "assemblyscript": "^0.27.0"
+  },
+  "type": "module"
+}
