@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build:dsp": "asc dsp/voices.ts --outFile dsp/voices.wasm --textFile dsp/voices.wat --optimize --runtime minimal --noAssert --initialMemory 8 --maximumMemory 8",
-    "test": "node test/wasm.test.mjs && node test/engine.test.mjs && node test/dsp-fallback.test.mjs && node test/sequencer.test.mjs"
+    "test": "node test/wasm.test.mjs && node test/engine.test.mjs && node test/dsp-fallback.test.mjs && node test/sequencer.test.mjs && node test/demo.test.mjs"
   },
   "keywords": [],
   "author": "",
