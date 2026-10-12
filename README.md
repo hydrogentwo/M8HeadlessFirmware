@@ -1,6 +1,10 @@
 # M8 Headless Firmware for Teensy 4.1
 M8 Headless Precompiled Firmware. Used for Teensy 4.1 connected to a host computer via USB.
 
+## Virtual Teensy (browser, no hardware) ##
+`web/` contains a browser-based M8 tracker that needs no Teensy: serve the
+directory over HTTP and open `virtual.html`. See `web/VIRTUAL_TEENSY.md`.
+
 Read the setup guide here: https://github.com/DirtyWave/M8Docs/blob/main/docs/M8HeadlessSetup.md
 
 See also: https://github.com/DirtyWave/M8DisplayTouchdesigner
