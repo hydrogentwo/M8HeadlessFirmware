@@ -21,7 +21,7 @@ export class VirtualSD {
     }
     this._opening = (async () => {
       try {
-        if (!('indexedDB' in window)) throw new Error('no indexedDB');
+        if (typeof window === 'undefined' || !('indexedDB' in window)) throw new Error('no indexedDB');
         this._db = await new Promise((resolve, reject) => {
           const req = indexedDB.open(DB_NAME, DB_VER);
           req.onupgradeneeded = () => {

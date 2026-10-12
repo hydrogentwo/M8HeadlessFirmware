@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>M8 Virtual Teensy — M8 Tracker in Your Browser</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #000;
+            color: #eee;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.6;
+        }
+        main { max-width: 620px; padding: 32px 24px; }
+        h1 { font-size: 40px; margin: 0 0 8px; letter-spacing: 2px; }
+        h1 span { color: #00efff; }
+        p.sub { color: #999; margin-top: 0; }
+        a.launch {
+            display: inline-block;
+            margin: 24px 0;
+            padding: 16px 48px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            background: #00efff;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        a.launch:hover { background: #7df7ff; }
+        ul { text-align: left; color: #bbb; }
+        kbd {
+            background: #333; color: #00efff;
+            padding: 2px 6px; border-radius: 3px; font-size: 13px;
+        }
+        footer { margin-top: 24px; color: #666; font-size: 13px; }
+        footer a { color: #00efff; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>M8 <span>VIRTUAL TEENSY</span></h1>
+        <p class="sub">The M8 tracker workflow in your browser. No Teensy 4.1 required.</p>
+        <a class="launch" href="virtual.html">▶ Launch Tracker</a>
+        <ul>
+            <li>Song / Chain / Phrase sequencer, instruments, tables, mixer, grooves</li>
+            <li>WebAssembly synth engine + sampler, delay / reverb / chorus sends</li>
+            <li>Keyboard, touch pad and remappable controls; Web MIDI output</li>
+            <li>Songs &amp; samples persist locally; export songs as JSON, bounce WAVs</li>
+        </ul>
+        <p><kbd>←↑↓→</kbd> move &nbsp;<kbd>Shift</kbd> shift &nbsp;<kbd>Space</kbd> play
+        &nbsp;<kbd>Z</kbd> option &nbsp;<kbd>X</kbd> edit &nbsp;<kbd>A</kbd>–<kbd>'</kbd> notes</p>
+        <footer>Display frontend from
+        <a href="https://github.com/derkyjadex/M8WebDisplay">M8WebDisplay</a> (MIT).
+        Virtual firmware is original work inspired by the M8 workflow.</footer>
+    </main>
+</body>
+</html>

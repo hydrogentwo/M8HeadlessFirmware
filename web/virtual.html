@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    M8 Virtual Teensy - browser M8 with no hardware required.
+    Display/input frontend adapted from M8WebDisplay (MIT, derkyjadex).
+-->
+<html lang="en">
+<head>
+    <title>M8 Virtual Teensy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+    <link rel="manifest" href="assets/app.webmanifest">
+    <link rel="stylesheet" href="css/virtual.css">
+</head>
+<body>
+    <header id="toolbar">
+        <span id="brand">M8 <em>VIRTUAL TEENSY</em></span>
+        <span id="status-pill" class="pill">CLICK ENABLE</span>
+        <span id="rec-pill" class="pill hidden">● REC <span id="rec-time">0:00</span></span>
+        <span class="spacer"></span>
+        <button id="btn-enable" title="Start the virtual Teensy (needed for audio)">Enable</button>
+        <button id="btn-pad" title="Show/hide touch controls">Pad</button>
+        <button id="btn-map" title="Remap keyboard/gamepad controls">Map</button>
+        <button id="btn-full" title="Fullscreen">&#x26F6;</button>
+        <button id="btn-help" title="Help">?</button>
+    </header>
+
+    <div id="display">
+        <canvas id="canvas" width="320" height="240"></canvas>
+
+        <div id="buttons" class="hidden">
+            <button id="connect">Enable</button>
+        </div>
+
+        <div id="mapping-buttons"></div>
+
+        <div id="mapping-help">
+            <p class="select-action">Click a key to add a new mapping</p>
+            <p class="enter-input">Press a keyboard key or gamepad button</p>
+        </div>
+
+        <div id="controls">
+            <div data-action="edit">EDIT</div>
+            <div data-action="option">OPT</div>
+            <div data-action="up">▲</div>
+            <div data-action="left">◀</div>
+            <div data-action="down">▼</div>
+            <div data-action="right">▶</div>
+            <div data-action="select">SHIFT</div>
+            <div data-action="start">PLAY</div>
+        </div>
+    </div>
+
+    <div id="help" class="hidden">
+        <h1>M8 Virtual Teensy</h1>
+        <p>A complete M8 tracker running in your browser — no Teensy required.
+        Sequencer, instruments, effects and sampler are emulated in WebAssembly;
+        songs and samples persist in your browser.</p>
+        <p>Arrow keys move. <kbd>Left Shift</kbd> = Shift, <kbd>Space</kbd> = Play,
+        <kbd>Z</kbd> = Option, <kbd>X</kbd> = Edit (remap with the Map button).
+        <kbd>A</kbd>–<kbd>'</kbd> play notes, <kbd>-</kbd>/<kbd>=</kbd> octave,
+        <kbd>[</kbd>/<kbd>]</kbd> velocity.</p>
+        <p>Shift+arrows switch views (Song, Chain, Phrase, Instrument, Mixer, ...).
+        Press Play on the demo song to hear it. FILE view saves/loads songs,
+        imports samples and bounces the master to WAV.</p>
+        <p>Frontend display code from
+        <a href="https://github.com/derkyjadex/M8WebDisplay" target="_blank" rel="noopener">M8WebDisplay</a> (MIT).
+        Virtual firmware is original work inspired by the M8 workflow.</p>
+        <button id="help-ok">OK</button>
+    </div>
+
+    <div id="toast" class="hidden"></div>
+    <input type="file" id="upload" class="hidden">
+
+    <script type="module" src="js/virtual/main.js"></script>
+</body>
+</html>

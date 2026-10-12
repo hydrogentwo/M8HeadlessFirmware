@@ -1,7 +1,7 @@
 {
-  "name": "M8 Display",
-  "short_name": "M8 Display",
-  "description": "Web display for M8 Headless",
+  "name": "M8 Virtual Teensy",
+  "short_name": "M8 Virtual",
+  "description": "M8 tracker in the browser, no Teensy required",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#000",
